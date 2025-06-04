@@ -1,0 +1,122 @@
+[
+    {
+      "id": 667058,
+      "first_name": "Alice",
+      "last_name": "Johnson",
+      "email": "alice.johnson@example.com",
+      "password_hash": "4e40e8ffe0ee32fa53e139147ed559229a5930f89c2204706fc174beb36210b3",
+      "age": 26,
+      "gender": "female",
+      "ssn": "511-91-8134",
+      "credit_score_level": "B",
+      "credit_comment": "Needs closer review"
+    },
+    {
+      "id": 882380,
+      "first_name": "Bob",
+      "last_name": "Smith",
+      "email": "bob.smith@example.com",
+      "password_hash": "8d059c3640b97180dd2ee453e20d34ab0cb0f2eccbe87d01915a8e578a202b11",
+      "age": 59,
+      "gender": "male",
+      "ssn": "848-10-5054",
+      "credit_score_level": "B",
+      "credit_comment": "Needs closer review"
+    },
+    {
+      "id": 441983,
+      "first_name": "Carol",
+      "last_name": "Lee",
+      "email": "carol.lee@example.com",
+      "password_hash": "6868b751d7c664a9492079bfb2858c86cc95f9480270413e334ed09fe94cf10d",
+      "age": 44,
+      "gender": "female",
+      "ssn": "345-94-8496",
+      "credit_score_level": "A",
+      "credit_comment": "Reliable repayment history"
+    },
+    {
+      "id": 544609,
+      "first_name": "David",
+      "last_name": "Wong",
+      "email": "david.wong@example.com",
+      "password_hash": "0f14089313b20c1723ec1d660b0aaa4f473cf5b321cd370f2d48b7bcf9a7b234",
+      "age": 57,
+      "gender": "male",
+      "ssn": "291-18-8640",
+      "credit_score_level": "A",
+      "credit_comment": "Excellent credit profile"
+    },
+    {
+      "id": 343787,
+      "first_name": "Emma",
+      "last_name": "Brown",
+      "email": "emma.brown@example.com",
+      "password_hash": "52293754fdbea92ab6c69cd64e644deed1552f40ccd3c1cef9d4d63c754d13e3",
+      "age": 39,
+      "gender": "female",
+      "ssn": "795-63-5805",
+      "credit_score_level": "C",
+      "credit_comment": "High risk"
+    },
+    {
+      "id": 735729,
+      "first_name": "Frank",
+      "last_name": "Khan",
+      "email": "frank.khan@example.com",
+      "password_hash": "2e51672858831d330326f5bbd72a42848314e6d6a35b5b75670b1e602fa04f3d",
+      "age": 60,
+      "gender": "male",
+      "ssn": "311-19-3901",
+      "credit_score_level": "C",
+      "credit_comment": "High risk"
+    },
+    {
+      "id": 616868,
+      "first_name": "Grace",
+      "last_name": "Taylor",
+      "email": "grace.taylor@example.com",
+      "password_hash": "d53ecaf3fc441a2086dc0cdc26692699dc8e12dd80f329414d605f1cdc4da3df",
+      "age": 40,
+      "gender": "female",
+      "ssn": "216-65-6031",
+      "credit_score_level": "A",
+      "credit_comment": "Excellent credit profile"
+    },
+    {
+      "id": 448006,
+      "first_name": "Henry",
+      "last_name": "Martinez",
+      "email": "henry.martinez@example.com",
+      "password_hash": "406ab09a88fa9d3ed39bd3a99f2cf84a449a86ed9fed487af9c37c9a39ec8b25",
+      "age": 26,
+      "gender": "male",
+      "ssn": "848-17-1353",
+      "credit_score_level": "C",
+      "credit_comment": "Credit limit restricted"
+    },
+    {
+      "id": 337148,
+      "first_name": "Ivy",
+      "last_name": "Nguyen",
+      "email": "ivy.nguyen@example.com",
+      "password_hash": "b39395df86d9fa5bfad0ba1da3f0c764ee41bcdde211271f3be809391beebb77",
+      "age": 53,
+      "gender": "female",
+      "ssn": "336-13-4569",
+      "credit_score_level": "C",
+      "credit_comment": "Defaulted before"
+    },
+    {
+      "id": 369906,
+      "first_name": "Jack",
+      "last_name": "Clark",
+      "email": "jack.clark@example.com",
+      "password_hash": "2a18c4b747ddc57ae267f81709473bac4d3fcef623e85014a0ecd98bb19ae699",
+      "age": 60,
+      "gender": "male",
+      "ssn": "923-46-5812",
+      "credit_score_level": "B",
+      "credit_comment": "Needs closer review"
+    }
+  ]

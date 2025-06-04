@@ -1,0 +1,62 @@
+name: Build and Deploy to Fargate
+
+on:
+  push:
+    paths-ignore:
+      - 'snippets/**'
+      - 'skelton/**'
+  pull_request:
+    paths-ignore:
+      - 'snippets/**'
+      - 'skelton/**'
+
+jobs:
+  # Task: Add SCA (Software Composition Analysis) step here
+  # Example: Datadog SCA GitHub Action
+  # sca:
+ 
+  # Task: Add SAST (Static Application Security Testing) step here
+  # Example: Datadog SAST GitHub Action 
+  # sast:
+
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    env:
+      ECR_REGISTRY: "${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com"
+      IMAGE_NAME: "vuln-app-${{ secrets.USER_ID }}"
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Log in to Amazon ECR
+        run: |
+          aws ecr get-login-password --region ${{ secrets.AWS_REGION }} \
+            | docker login --username AWS --password-stdin $ECR_REGISTRY
+
+      - name: Build Docker image
+        run: |
+          docker build -t $IMAGE_NAME:latest .
+
+      - name: Tag image for ECR
+        run: |
+          docker tag $IMAGE_NAME:latest $ECR_REGISTRY/$IMAGE_NAME:latest
+
+      - name: Push image to ECR
+        run: |
+          docker push $ECR_REGISTRY/$IMAGE_NAME:latest
+
+      - name: Force new deployment in ECS service
+        run: |
+          aws ecs update-service \
+            --cluster ${{ secrets.ECS_CLUSTER_NAME }} \
+            --service ${{ secrets.ECS_SERVICE_NAME }} \
+            --force-new-deployment \
+            --desired-count 1
