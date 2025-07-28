@@ -1,4 +1,6 @@
-# === ADD the libraries for VULNERABILITY SCENARIO ===
+# COPY all contents of this file to ./app.py
+
+# === The libraries for VULNERABILITY SCENARIO ===
 import sqlite3  # 🚨 vulnerable SQL usage
 import json
 from flask import Flask, request
@@ -44,6 +46,7 @@ for user in users:
     ))
 conn.commit()
 
+# === Varidation URL: Hit ”curl -I [Your Public IP]/” to see if the app properly started ===
 @app.route("/")
 def index():
     return "Flask app is running. Add your first vulnerability!"

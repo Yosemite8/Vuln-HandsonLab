@@ -1,9 +1,12 @@
-# === ADD the libraries for VULNERABILITY SCENARIO ===
+# COPY all contents of this file to ./app.py
+
+# === The libraries for VULNERABILITY SCENARIO ===
 import os  # 🚨 used for file path operations
 from flask import Flask, request
 
 app = Flask(__name__)
 
+# === Varidation URL: Hit ”curl -I [Your Public IP]/” to see if the app properly started ===
 @app.route("/")
 def index():
     return "Flask app is running. Add your first vulnerability!"

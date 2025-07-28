@@ -1,4 +1,6 @@
-# === ADD the libraries for VULNERABILITY SCENARIO ===
+# COPY all contents of this file to ./app.py
+
+# === The libraries for VULNERABILITY SCENARIO ===
 import os  # 🚨 used for command execution
 from flask import Flask, request
 
@@ -8,7 +10,7 @@ app = Flask(__name__)
 def index():
     return "Flask app is running. Add your first vulnerability!"
 
-# === VULNERABILITY INSERTION POINT ===
+# === VULNERABILE POINT ===
 # === VULN: OS Command Injection via POST body ===
 @app.route("/run", methods=["POST"])
 def run_command():
