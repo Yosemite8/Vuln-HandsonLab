@@ -98,6 +98,7 @@ Set the following secrets:
 | `AWS_ACCOUNT_ID` | Your AWS account ID |
 | `ECS_CLUSTER_NAME` | Target ECS cluster name  (**hands-on host informs the name of cluster**) |
 | `ECS_SERVICE_NAME` | Target ECS service name (**hands-on host informs the name of service**)|
+| `TEAM_ID` | A unique suffix to isolate your deployment (**hands-on host informs the TEAM_ID for attendees**)|
 | `USER_ID` | A unique suffix to isolate your deployment (**hands-on host informs the USER_ID for attendees**)|
 
 ---

@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       ECR_REGISTRY: "${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com"
-      IMAGE_NAME: "vuln-app-${{ secrets.USER_ID }}"
+      IMAGE_NAME: "vuln-app-${{ secrets.TEAM_ID }}-${{ secrets.USER_ID }}"
 
     steps:
       - name: Checkout source code

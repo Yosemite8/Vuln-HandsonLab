@@ -6,7 +6,7 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
-# === Varidation URL: Hit ”curl -I [Your Public IP]/” to see if the app properly started ===
+# === Varidation URL: Hit ”curl [Your Public IP]/” to see if the app properly started ===
 @app.route("/")
 def index():
     return "Flask app is running. Add your first vulnerability!"
